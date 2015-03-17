@@ -1,0 +1,6 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+  <g fill="none" stroke="#FFFFFF">
+    <line stroke-width="2" stroke-miterlimit="10" x1="2" y1="20" x2="38" y2="20"/>
+    <polyline stroke-width="2" stroke-miterlimit="10" points="20,2 2,20 20,38 "/>
+  </g>
+</svg>

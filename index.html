@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv='Content-type' content='text/html; charset=utf-8'>
+    <title>Slideshow</title>
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- DOM elements -->
+    <div id="liweConnector"></div>
+    <div id="slideshow"></div>
+
+    <!-- Scripts -->
+    <script charset="utf-8" src="//liwe.co/api/liwe.js"></script>
+    <script src="lib/react.min.js"></script>
+    <script src="lib/JSXTransformer.js"></script>
+    <script src="lib/qrcode.js"></script>
+    <script type="text/jsx" src="scripts/QRCodeComponent.jsx"></script>
+    <script type="text/jsx" src="scripts/QRCard.jsx"></script>
+    <script type="text/jsx" src="scripts/LiweConnector.jsx"></script>
+    <script type="text/jsx" src="scripts/Slideshow.jsx"></script>
+    <script type="text/jsx" src="scripts/Picture.jsx"></script>
+    <script type="text/jsx"> 
+
+      // Init the Liwe object
+      myLiwe = new Liwe({
+        key: 'k3Y4l1W3g1ThU85aMp1E4pP5',
+        maxRemoteConn: 1
+      });
+
+      mySlides = [
+        'assets/images/IMG_9831.jpg',
+        'assets/images/IMG_9832.jpg',
+        'assets/images/IMG_9834.jpg',
+        'assets/images/IMG_9840.jpg',
+        'assets/images/IMG_9862.jpg'
+      ];
+
+      React.render(
+        <LiweConnector liwe={myLiwe} />,
+        document.getElementById('liweConnector')
+      );
+
+      React.render(
+        <Slideshow slides={mySlides} liwe={myLiwe} />,
+        document.getElementById('slideshow')
+      );
+
+      // Let's start the magic
+      myLiwe.connect();
+    </script>
+  </body>
+</html>

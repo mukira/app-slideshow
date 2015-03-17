@@ -1,0 +1,141 @@
+/**
+ * Slideshow styling
+ * 
+ */
+
+
+/* Font ****************************************/
+@font-face {
+	font-family: 'Montserrat';
+	src: url('assets/fonts/Montserrat/Montserrat-Regular.eot');
+	src: url('assets/fonts/Montserrat/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+		url('assets/fonts/Montserrat/Montserrat-Regular.woff') format('woff'),
+		url('assets/fonts/Montserrat/Montserrat-Regular.ttf') format('truetype'),
+		url('assets/fonts/Montserrat/Montserrat-Regular.svg#Montserrat-regular') format('svg');
+}
+
+/**
+ * Base
+ * background generated on patternify.com
+ */
+
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 100;
+	background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAALElEQVQYV2MUFBT8zwAEQJrh/fv3ICZWwDgUFCopKYE94+LiwrBnz54h7RkAY90qMvJg4bwAAAAASUVORK5CYII=) repeat;
+}
+
+p {
+	margin: 0.25em 0;
+	line-height: 1.5em;
+}
+
+/**
+ * Components
+ */
+
+/* Liwe connector ***********************************************/
+.liwe-connector {
+	position: absolute;
+	max-width: 350px;
+	left: 0;
+	top: 5%;
+	padding: 1em;
+	font-size: 1.25em;
+	line-height: 1.5em;
+
+	box-sizing: border-box;
+
+	color: #030303;
+	background: #ffffff;
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
+	z-index: 10;
+}
+
+.qrcard-url {
+	margin: 0;
+}
+
+.qrcode-wrap img {
+	float: left;
+	width: 128px;
+	height: 128px;
+	margin-right: 16px;
+}
+
+
+/* Slideshow *******************************************************/
+.slideshow {
+	position: relative;
+}
+
+.signalLeft, .signalRight {
+  position: absolute;
+  top: 5%;
+
+  width: 5%;
+  min-width: 50px;
+  height: 90%;
+
+  z-index: 5;
+}
+
+.signalLeft object, .signalRight object {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 40px;
+	height: 40px;
+	margin: -20px 0 0 -20px;
+}
+
+.signalLeft object {
+	transform: rotate(180deg);
+}
+
+.signalLeft {
+  left: 0;
+  border-right: 1px dotted white;
+}
+
+.signalRight {
+  right: 0;
+  border-left: 1px dotted white;
+}
+
+.signalLeft.disabled, .signalRight.disabled {
+	opacity: 0.2;
+}
+
+.picture {
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+
+	left: 0;
+	top: 0;
+
+	box-sizing: border-box;
+	transition: left .6s;
+}
+
+.picture.pos-next {left:  100vw;}
+.picture.pos-prev {left: -100vw;}
+
+.picture img {
+	position: absolute;
+	width: auto;
+	height: auto;
+	max-width: 98%;
+	max-height: 98%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
