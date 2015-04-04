@@ -105,12 +105,7 @@ var Slideshow = React.createClass({
     
     return (<div>
       <div className="slideshow">{pictures}</div>
-      <div className={'signalLeft ' + signalLeftState}>
-        <object data='assets/vector/arrow.svg' type='image/svg+xml'>&#171;</object>
-      </div>
-      <div className={'signalRight ' + signalRightState}>
-        <object data='assets/vector/arrow.svg' type='image/svg+xml'>&#187;</object>
-      </div>
+      <span className="index-info">{(this.state.index + 1) + '/' + this.slides.length}</span>
     </div>);
   }
 });

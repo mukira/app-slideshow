@@ -75,42 +75,19 @@ p {
 	position: relative;
 }
 
-.signalLeft, .signalRight {
+.index-info {
   position: absolute;
-  top: 5%;
-
-  width: 5%;
-  min-width: 50px;
-  height: 90%;
-
-  z-index: 5;
-}
-
-.signalLeft object, .signalRight object {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 40px;
-	height: 40px;
-	margin: -20px 0 0 -20px;
-}
-
-.signalLeft object {
-	transform: rotate(180deg);
-}
-
-.signalLeft {
-  left: 0;
-  border-right: 1px dotted white;
-}
-
-.signalRight {
+	bottom: 10%;
   right: 0;
-  border-left: 1px dotted white;
-}
+  border: 1px dotted white;
+  border-right: none;
+  padding: 20px 30px;
 
-.signalLeft.disabled, .signalRight.disabled {
-	opacity: 0.2;
+  font-size: 24px;
+  line-height: 1em;
+  text-align: center;
+  color: white;
+  z-index: 5;
 }
 
 .picture {
