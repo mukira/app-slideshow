@@ -156,7 +156,9 @@ var Picture = React.createClass({
     };
 
     // Formatting
-    output.scale = Math.max(0.35, Math.min(4, output.scale));
+    output.move.x = Math.max(-window.innerWidth/2,  Math.min(window.innerWidth/2,  output.move.x));
+    output.move.y = Math.max(-window.innerHeight/2, Math.min(window.innerHeight/2, output.move.y));
+    output.scale  = Math.max(0.35, Math.min(4, output.scale));
     return output;
   },
 
