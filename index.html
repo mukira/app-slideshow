@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv='Content-type' content='text/html; charset=utf-8'>
-    <title>Slideshow</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui" />
 
-    <link rel="stylesheet" href="style.css">
+    <title>Slideshow (powered by react + liwe)</title>
+    <meta name="description" content="Slideshow app built with Liwe and React" />
+
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- DOM elements -->
@@ -12,7 +15,7 @@
     <div id="slideshow"></div>
 
     <!-- Scripts -->
-    <script charset="utf-8" src="//liwe.co/api/liwe.js"></script>
+    <script charset="utf-8" src="http://liwe.co/api/liwe.js"></script>
     <script src="lib/react.min.js"></script>
     <script src="lib/JSXTransformer.js"></script>
     <script src="lib/qrcode.js"></script>
@@ -21,6 +24,8 @@
     <script type="text/jsx" src="scripts/LiweConnector.jsx"></script>
     <script type="text/jsx" src="scripts/Slideshow.jsx"></script>
     <script type="text/jsx" src="scripts/Picture.jsx"></script>
+
+    <script type="text/jsx" src="scripts/demoInit.js"></script>
     <script type="text/jsx"> 
 
       // Init the Liwe object
