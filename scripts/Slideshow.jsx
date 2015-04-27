@@ -94,6 +94,7 @@ var Slideshow = React.createClass({
   render: function () {
     var pos,
       pictures         = [],
+      bullets          = [],
       signalLeftState  = this.state.index > 0 ? 'enabled' : 'disabled',
       signalRightState = this.state.index < this.slides.length - 1 ? 'enabled' : 'disabled';
     
@@ -101,11 +102,12 @@ var Slideshow = React.createClass({
       pos = index - this.state.index;
       pos = pos > 0 ? 1 : (pos < 0 ? -1 : 0);
       pictures.push(<Picture key={index} link={this.slides[index]} index={pos} remote={pos ? null : this.remote} switcher={this.switchChecker} />);
+      bullets.push(<span className={pos ? '' : 'active'} ></span>);
     }
     
     return (<div>
       <div className="slideshow">{pictures}</div>
-      <span className="index-info">{(this.state.index + 1) + '/' + this.slides.length}</span>
+      <div className="bullet-info">{bullets}</div>
     </div>);
   }
 });
